@@ -1,15 +1,11 @@
 def SecondGreatLow(arr)
   new = arr.sort
   if new.length < 3
-    return "#{new[1]} #{new[0]}"
+    return "#{new[0]} #{new[1]}"
   elsif new.length == 3
     return "#{new[1]}"
   else 
-    secondLow = 
-      
-    end
-    #do something here to make sure that you are getting the second-highest number
-    #not just the second in the list--if number's repeat, you want the next
-    #see explanation again
+    unique = new.uniq
+    return "#{unique[1]} #{unique[-2]}"
   end     
 end
